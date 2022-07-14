@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  background-color: rgb(241, 227, 237);
+
+}
+
+#root{
+   display: grid;
+  grid-template-columns: repeat(4,363px);
+grid-template-rows: 2;
+gap: 8px;
+  background-color: rgb(233, 104, 196);
+}
+#head{
+  justify-content: center;
+  display:inline-block;
+  margin: 8px 500px;
+  padding: 8px;
+}
+
+.flag{
+    height: 150px;
+    border: 2px solid rgb(214, 41, 148);
+    cursor: pointer;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.flag:focus{
+color: beige;
+}
+.card-body{
+  display: inline-block;
+height: 150px;
+width: auto;
+padding: 10px;
+cursor: pointer;
+color: rgb(42, 41, 44);
+box-shadow:rgb(194, 125, 173) ;
+border-radius: 5px;
+
+}

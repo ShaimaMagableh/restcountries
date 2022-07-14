@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+      <h1 id="head"> <strong>RESTCOUNTRIES API </strong></h1>
+
+        <div id="root"></div>
+
+    
+    </body>
+    <script>
+    const http = new XMLHttpRequest();
+    http.open("GET", "https://restcountries.com/v2/all");
+http.send();
+http.onload = function () {
+  const data = JSON.parse(http.responseText);
+  for (let country of data) {
+    document.getElementById("root").innerHTML += `
+      <div class="card" ;">
+        <img src="${country.flags.svg}" class="flag"  alt="${country.name.common} flag">
+        <div class="card-body">
+          <p class="my-1"><strong>CountryName:</strong> ${country?.name}</p>
+          <p class="my-1"><strong>Region:</strong> ${country?.region}</p>
+          <p class="my-1"><strong>Language:</strong> ${country?.language}</p>
+
+        </div>
+      </div>
+    `;
+  }
+};
+
+</script>
+
+</html>
