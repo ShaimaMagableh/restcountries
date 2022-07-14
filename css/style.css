@@ -1,6 +1,7 @@
 *{
   padding: 0;
   background-color: rgb(241, 227, 237);
+  box-sizing: border-box;
 
 }
 
@@ -9,7 +10,6 @@
   grid-template-columns: repeat(4,363px);
 grid-template-rows: 2;
 gap: 8px;
-  background-color: rgb(233, 104, 196);
 }
 #head{
   justify-content: center;
@@ -24,18 +24,20 @@ gap: 8px;
     cursor: pointer;
     border-radius: 5px;
     object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
-.flag:focus{
-color: beige;
+.flag,.card-body:hover{
+background-color: rgb(221, 20, 154);
 }
 .card-body{
   display: inline-block;
 height: 150px;
 width: auto;
 padding: 10px;
-cursor: pointer;
+cursor: pointer; 
 color: rgb(42, 41, 44);
-box-shadow:rgb(194, 125, 173) ;
+box-shadow:rgba(194, 125, 173,0) ;
 border-radius: 5px;
 
 }
